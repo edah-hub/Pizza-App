@@ -5,24 +5,28 @@ header .logo{
     font-family: 'Poppins', sans-serif;
  }
  
- header .logo i{
+ .header .logo i{
      color: var(--green);
  }
  
- header .navbar a{
+ .header .navbar a{
  font-size: 1.7rem;
  border-radius: .5rem;
  padding: .5rem 1.5rem;
  color: var(--light-color);
  }
+
+ .header .navbar{
+     width: 100%;
+ }
  
- header .navbar a.active,
- header .navbar a:hover{
+ .header .navbar a.active,
+ .header .navbar a:hover{
      color: #fff;
      background-color: var(--green);
  }
- header .icons i,
- header .icons a{
+ .header .icons i,
+ .header .icons a{
      cursor: pointer;
      margin-left:.5rem ;
      height:4.5rem ;
@@ -35,13 +39,16 @@ header .logo{
  }
 
  .body-text{
-     margin: 500px;
+     /* margin: 600px; */
     font-size:500%;
     font-weight: 800;
     font-family: 'Poppins', sans-serif;
     text-align: center;
+   
+        /* opacity: 0.5; */
+
     color: #fff;
-    background-color: rgb(182, 36, 36);        
+    background-color: rgb(182, 36, 36);    
        
     
     
@@ -50,4 +57,8 @@ header .logo{
  .body-text .p2{
      font-size: 20px;
      font-weight: 200;
+ }
+
+ .menu-overlay{
+     align-items: center;
  }

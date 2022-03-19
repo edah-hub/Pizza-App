@@ -23,7 +23,7 @@ html {
   scroll-behavior: smooth;
 }
 
-header{
+.navbar{
     position: fixed;
     top: 0;left: 0;right: 0%;
     background: #fff;
@@ -31,17 +31,23 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* font-size: large; */
-    z-index: 1000;
+    /* font-size: large;
+    z-index: 1000; */
     box-shadow: var(--black);
     
 
 }
 
-body {
-  background: url(../images/background.jpg);
-  background-repeat: no-repeat;
-  background-position: var(--light-color);
-  background-size: cover;
-  /* opacity: 0.5; */
+.header{
+    background: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: var(--light-color);
+    background-size: cover;
+    height: 1200px;
+    margin-bottom: 1%;
+    
+}
+
+footer{
+    padding: 1%;
 }

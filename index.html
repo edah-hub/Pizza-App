@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/" />
@@ -17,11 +18,13 @@
   </head>
   <body>
     <!-- header section starts here   -->
-    <header>
-      <a href="#" class="logo"><i class="fa-solid fa-pizza-slice"></i>Pizza Corner</a >
+    <section class="header" id="home">
+    
+      
       <nav class="navbar">
+        <a href="#" class="logo"><i class="fa-solid fa-pizza-slice"></i>Pizza Corner</a >
         <a href="#home" class="active">Home</a>
-        <a href="#dishes">Dishes</a>
+        <a href="#menu">Dishes</a>
         <a href="#about">About</a>
         <a href="#menu">Menu</a>
         <a href="#review">Review</a>
@@ -29,16 +32,117 @@
       </nav>
 
    
-    </header>
-    <section class="body-text">
+ 
+    <!-- <section class="body-text"> -->
         <div>
-          <p>WELCOME TO PIZZA CORNER <br></p>
-           <p class="p2"> Get Pizza Delivered To Your Door Step At A Click Of A button.</p>          
-         
+            <div class="body-text" >
+                <p>WELCOME TO PIZZA CORNER <br></p>
+                 <p class="p2"> Get Pizza Delivered To Your Door Step At A Click Of A button.</p>          
+               
+              </div>
         </div>
+
       
   </section>
 
+  <!-- <div id="menus"></div>
+  <br> -->
+  <section class="menu" id="menu">
+      <div class="container">
+       
+            <div class="menu-overlay">
+                <h1 class="text-center text-white" id="menu">Menu</h1>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/pizza1.jpeg" alt="small-pizza" class="wiggle">
+                        <figcaption class="text-white">small<br>Ksh. 300</figcaption>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/pizza2.jpeg" alt="medium-pizza" class="wiggle">
+                        <figcaption class="text-white">Medium<br>Ksh. 600</figcaption>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/pizza3.jpeg" alt="large-pizza" class="wiggle">
+                        <figcaption class="text-white">Large<br>Ksh. 1200</figcaption>
+                    </div>
+                </div>
+            </div>
+       
+      </div>
+  
+  </section>
 
-  </body>
+  <div class="orders" id="order">
+    <h1 class="text-center" id="order-pizza">Order Pizza</h1>
+    <div class="form-group row">
+        <div class="order-overlay text-center">
+            <form class="text-center">
+                <label>Choose your preferred Size:</label>
+                <select class="custom-select custom-select-md mb-3" id="size" required>
+                    <option value="regular">Regular</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <label>Pick your pizza Flavour:</label> 
+                <select class="flavour" required>
+                    <option value="vegtikka">Veggie Pizza</option>
+                    <option value="chickentikka">Cheese Pizza</option>
+                    <option value="periperi">Peri-Peri Chicken</option>
+                    <option value="bbq">BBQ Chicken Pizza</option>
+                    <option value="boerewors">Boerewors</option>
+                    <option value="hawaiian">Hawaiian</option>
+                    <option value="mushroom">Chicken and Mushroom</option>
+                    <option value="regina">Regina Pizza</option>
+                </select>
+                
+                <label for="crust">Choose your favorite Crust:</label>
+                <select class="custom-select custom-select-md mb-3" id="crust" required>
+                    <option value="thin">Thin Crust @ Ksh. 100</option>
+                    <option value="thick">Thick Crust @ Ksh. 150</option>
+                    <option value="flatbread">FlatBread Crust @ sh. 180</option>
+                    <option value="custom">Custom Crust @ sh. 280</option>
+                </select>
+                <label>Select Your favourite Toppings</label>
+                <select class="custom-select custom-select-md mb-3" id="toppings" required>
+                    <option value="tomato">Tomato @ sh. 80</option>
+                    <option value="onions">Onions @ sh. 80</option>
+                    <option value="mushroom">Mushroom @ sh. 80</option>
+                    <option value="greenpepper">Green Pepper @ sh. 80</option>
+                    <option value=""></option>
+                    <option value="olives">Olives @ sh. 120</option>
+                    <option value="pineapple">Pineapple @ sh. 120</option>
+                    <option value="sweetcorn">Sweet Corn @ sh. 120</option>
+                    <option value="macon">Macon @ sh. 120</option>
+                    <option value="mince">Mince @ sh. 120</option>
+                    <option value=""></option>
+                    <option value="beef">Beef Peperoni @ sh. 170</option>
+                    <option value="chicken">Periperi Chicken @ sh. 170</option>
+                </select> 
+                <label for="number">Number of Pizza</label>
+                <input type="number" class="number" id="number" placeholder="Number of pizzas" min="1" required>
+
+
+            </form>
+            <a href="#summary">
+                <button type="submit" class="btn btn-success checkout" id="checkout">
+                    Checkout
+                </button>
+            </a>
+
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>
+
+ 
+  
+<footer>
+    <div class="socials">
+        <a href=""><span class="fab fa-facebook icon_facebook"></span></a>
+        <a href=""><span class="fab fa-twitter icon_twitter"></span></a>
+        <a href=""><span class="fab fa-google-plus icon_googlep"></span></a>
+        <a href=""><span class="fab fa-linkedin icon_linkedin"></span></a>
+    </div> 
+</footer>
+</body>
 </html>
