@@ -73,3 +73,35 @@ $(document).ready(function () {
     // create url search params
     const urlParams = new URLSearchParams(window.location.search);
     const pizzaName = urlParams.get("pizza");
+
+      // Add pizza name to html
+      $("#pizza-name").html(pizzaName);
+      $("#summary").html(pizzaName);
+
+       // Hide delivery address input
+    $("#yes-delivery").hide();
+
+    // Get input references
+    let pizzaSize = "";
+    let crustType = "";
+    let delivery = "";
+    let quantity = 1;
+    let toppings = [];
+
+    function totalHelper() {
+        const newPizza = new Pizza(pizzaSize, crustType, toppings, quantity, delivery);
+        const newTotal = newPizza.getTotal();
+
+        $("#summary-total").html(`Total - Ksh. ${newTotal}`);
+    }
+
+       // Populate order summary
+    // Update pizza size on summary section
+    $("input[name=pizzaSizes]").change(function () {
+        pizzaSize = $('input[name=pizzaSizes]:checked').val();
+
+        $("#summary-size").html(`Size - ${pizzaSize}`);
+
+        // Get new total
+        totalHelper();
+    });
