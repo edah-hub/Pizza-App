@@ -10,3 +10,12 @@ $(document).ready(function () {
 
     }
     Pizza.prototype.deliveryPrice = 150;
+    Pizza.prototype.orderTotal = 0;
+
+
+    Pizza.prototype.pizzaSizePrices = [
+        { size: "small", price: 550 },
+        { size: "medium", price: 850 },
+        { size: "large", price: 1050 },
+        { size: "extraLarge", price: 1200 }
+    ];
