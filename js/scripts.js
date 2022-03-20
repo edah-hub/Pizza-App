@@ -115,4 +115,20 @@ $(document).ready(function () {
         // Get new total
         totalHelper();
     });
-    
+
+     // Update toppings on summary section
+     $("input[name=toppings]").change(function () {
+        const newToppings = [];
+
+        $.each($("input[name='toppings']:checked"), function () {
+            // Add a space before the array item to allow for text wrapping
+            newToppings.push(` ${$(this).val()}`);
+        });
+
+        toppings = newToppings;
+
+        $("#summary-toppings").html(`Toppings - ${toppings}`);
+
+        // Get new total
+        totalHelper();
+    });
