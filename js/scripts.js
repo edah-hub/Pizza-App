@@ -19,3 +19,12 @@ $(document).ready(function () {
         { size: "large", price: 1050 },
         { size: "extraLarge", price: 1200 }
     ];
+    Pizza.prototype.toppingsPrices = [
+        { name: "pepperoni", price: 60 },
+        { name: "mushrooms", price: 80 },
+        { name: "onions", price: 50 },
+        { name: "sausage", price: 70 },
+        { name: "extraCheese", price: 100 },
+        { name: "blackOlives", price: 80 },
+        { name: "greenPeppers", price: 80 }
+    ];
