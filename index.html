@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.js">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css" />
@@ -27,7 +28,7 @@
         <a href="#menu">Dishes</a>
         <a href="#about">About</a>
         <a href="#menu">Menu</a>
-        <a href="#review">Review</a>
+        <a href="#contact-us">Contact Us</a>
         <a href="#order">Order Now</a>
       </nav>
 
@@ -55,7 +56,7 @@
                 <div class="row">
                     <div class="col-4">
                         <img src="images/pizza1.jpeg" alt="small-pizza" class="wiggle">
-                        <figcaption class="text-white">small<br>Ksh. 300</figcaption>
+                        <figcaption class="text-white">Regular<br>Ksh. 300</figcaption>
                     </div>
                     <div class="col-4">
                         <img src="images/pizza2.jpeg" alt="medium-pizza" class="wiggle">
@@ -75,35 +76,34 @@
   <div class="orders" id="order">
     <h1 class="text-center" id="order-pizza">Order Pizza</h1>
     <div class="form-group row">
-        <div class="order-overlay text-center">
-            <form class="text-center">
-                <label>Choose your preferred Size:</label>
-                <select class="custom-select custom-select-md mb-3" id="size" required>
-                    <option value="regular">Regular</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                    <option value="extraLarge">extraLarge</option>
-                </select>
-                <label>Pick your pizza Flavour:</label> 
-                <select class="flavour" required>
-                    <option value="vegtikka">Veggie Pizza</option>
-                    <option value="chickentikka">Cheese Pizza</option>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 order-overlay text-center">
+            <form class="col-sm-6 offset-sm-3 text-center">
+                <label>Pick your pizza Flavour:</label>
+                <select class="custom-select custom-select-md mb-3 flavour" required>
+                    <option value="vegtikka">Veg Tikka</option>
+                    <option value="chickentikka">Chicken Tikka</option>
                     <option value="periperi">Peri-Peri Chicken</option>
-                    <option value="bbq">BBQ Chicken Pizza</option>
+                    <option value="bbq">BBQ Steak</option>
                     <option value="boerewors">Boerewors</option>
                     <option value="hawaiian">Hawaiian</option>
                     <option value="mushroom">Chicken and Mushroom</option>
                     <option value="regina">Regina Pizza</option>
-                </select>
-                
-                <label for="crust">Choose your favorite Crust:</label>
+                </select> <br>
+                <label>Chose Pizza Size:</label>
+                <select class="custom-select custom-select-md mb-3" id="size" required>
+                    <option value="regular">Regular</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select> <br>
+                <label for="crust">Choose Crust:</label>
                 <select class="custom-select custom-select-md mb-3" id="crust" required>
                     <option value="thin">Thin Crust @ Ksh. 100</option>
                     <option value="thick">Thick Crust @ Ksh. 150</option>
                     <option value="flatbread">FlatBread Crust @ sh. 180</option>
                     <option value="custom">Custom Crust @ sh. 280</option>
-                </select>
-                <label>Select Your favourite Toppings</label>
+                </select> <br>
+                <label>Choose favourite Toppings</label> 
                 <select class="custom-select custom-select-md mb-3" id="toppings" required>
                     <option value="tomato">Tomato @ sh. 80</option>
                     <option value="onions">Onions @ sh. 80</option>
@@ -118,10 +118,10 @@
                     <option value=""></option>
                     <option value="beef">Beef Peperoni @ sh. 170</option>
                     <option value="chicken">Periperi Chicken @ sh. 170</option>
-                </select> 
-                <label for="number">Number of Pizza</label>
-                <input type="number" class="number" id="quantity" placeholder="Number of pizzas" min="1" required>
-
+                </select> <br>
+                <label for="number"> required
+                    Number of Pizza's<input type="number" class="form-control" id="number" placeholder="Number of pizzas" min="1" required>
+                </label>
 
             </form>
             <a href="#summary">
@@ -134,9 +134,10 @@
         <div class="col-sm-2"></div>
     </div>
 </div>
+
 <div class="order-summary" id="sum-order">
     <h1 class="text-center" id="summary">Order Summary</h1>
-    <h2 class="text-center summary">Hello there, your order is as follows:</h2>
+    <h2 class="text-center summary"> <b>Hello there, your order summary is as below:</b> </h2>
     <ol id="list" class="text-center sum">
     </ol>
 
@@ -145,20 +146,48 @@
         <div class="customerdata row">
             <div class="col-sm-3"></div>
             <form action="" class="form-group col-sm-6 data">
-                <input type="text" class="form-control cdata" placeholder="Enter your Name:">
-                <input type="text" class="form-control cdata" placeholder="Enter your phone number: ">
-                <input type="text" class="form-control cdata" placeholder="Enter the location: ">
-                <button class="btn bg-info text-center d-block mx-auto go">Make Delivery</button>
+                <input type="text" class="form-control cdata" placeholder="Name:">
+                <input type="number" class="form-control cdata" placeholder="phone number: ">
+                <input type="text" class="form-control cdata" placeholder="location: ">
+                <input type="email" class="form-control cdata" placeholder="mail: ">
+                <button class="btn bg-info text-center d-block mx-auto go">Delivery</button>
             </form>
 
             <div class="col-sm-3"></div>
         </div>
     </div>
     <div class="d-block mx-auto text-center">
-        <button class='yes-delivery"'>Home Delivery</button>
-        <button class='no-delivery"'>Pick Up</button>
+        <button class='deliver'>Delivery</button>
+        <button class='delivernot'>Pick Up</button>
     </div>
 </div>
+
+<div class="contacts" id="contact-us">
+    <div class="contact-overlay">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1>Contact Us</h1>      
+              <p>We value your feedback.</p>
+            </div>
+          </div>
+                <form>
+                    <div class="email-info">
+                        <div class="form-group fill-all-form">
+                            <input type="email" class="form-control bg-transparent email" id="email" placeholder="Email"
+                                   required="">
+                        </div>
+                    </div>
+                    <div class=" email-info text-center">
+                        <button class="btn click-me" onclick="subscribe();">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
+</div>
+
  
   
 <footer>
@@ -169,5 +198,9 @@
         <a href=""><span class="fab fa-linkedin icon_linkedin"></span></a>
     </div> 
 </footer>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
