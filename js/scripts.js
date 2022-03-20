@@ -105,3 +105,14 @@ $(document).ready(function () {
         // Get new total
         totalHelper();
     });
+
+      // Update crust type on summary section
+      $("input[name=crustType]").change(function () {
+        crustType = $('input[name=crustType]:checked').val();
+
+        $("#summary-crust").html(`Crust - ${crustType}`);
+
+        // Get new total
+        totalHelper();
+    });
+    
