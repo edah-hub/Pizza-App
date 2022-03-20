@@ -70,3 +70,6 @@ $(document).ready(function () {
 
         return total;
     }
+    // create url search params
+    const urlParams = new URLSearchParams(window.location.search);
+    const pizzaName = urlParams.get("pizza");
