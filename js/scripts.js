@@ -403,15 +403,23 @@ $(function () {
     $(".deliver").click(function () {
         $('.summary').slideUp();
         $('#list').slideUp();
-        $('.summary').text("Provide location details").slideDown();
+        $('.summary').text("Please enter your location details").slideDown();
         $('.deliver').hide(1000);
         $('.delivernot').hide(1000);
         $('.cdata-overlay').slideDown();
+        // $('#deliver').text("Your Order has been received.Thank you.");
+    });
+
+    $("#deliver").click(function () {
+        var location = document.getElementById("location");
+        alert("Your order will be delivered to " +location.value);
+         $('#deliver').text("Your Order has been received.Thank you for shopping with us.");
     });
 
 
     //Pick Up
     $(".delivernot").click(function () {
+        $('.summary').text("Please pick your packages from our shops").slideDown();
 
     });
 
