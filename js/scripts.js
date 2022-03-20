@@ -59,3 +59,14 @@ $(document).ready(function () {
         }
 
         total = total * this.quantity;
+
+        if (this.isDelivery === "yes") {
+            total = total + Pizza.prototype.deliveryPrice;
+        } else {
+            total = total + 0;
+        }
+
+        Pizza.prototype.orderTotal = total;
+
+        return total;
+    }
