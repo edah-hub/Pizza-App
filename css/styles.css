@@ -18,8 +18,8 @@
 
 html {
   font-size: 62.5%;
-  overflow: hidden;
-  scroll-padding-top: 5.5rem;
+  /* overflow: hidden; */
+  scroll-padding-top: 5.0rem;
   scroll-behavior: smooth;
 }
 
@@ -27,7 +27,7 @@ html {
     position: fixed;
     top: 0;left: 0;right: 0%;
     background: #fff;
-    padding: 1 rem 7%;
+    padding: .0 rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,12 +43,14 @@ html {
     background-repeat: no-repeat;
     background-position: var(--light-color);
     background-size: cover;
-    height: 1200px;
-    margin-bottom: 1%;
+    height: 1100px;
+    /* margin-bottom: 1%; */
     
 }
 
 footer{
-    padding: 1%;
+    padding: 2% 15% 5% 7%;
     align-items: center;
+    margin-left: 41.5%;
+
 }
